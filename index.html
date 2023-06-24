@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="libs/fontawesome/css/all.min.css">
+    <link rel="shortcut icon" href="assets/images/test.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/test.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+    <script>
+        if(sessionStorage.getItem("user")!="141469669") window.location = 'login.html';
+        const load = (m)=>{
+            $('#loader').css('display',m==1?'block':m==0?'none':'');
+        }
+        window.onload = () =>{
+            load(0);
+        }
+    </script>
+    
+</head>
+<body class="bg0">
+    <header class="bg2">
+        <div id="cont" >
+            <button id="men-open-btn" class="fa fa-bars bg-tr brdls fa-lg txt2"></button>
+        </div>
+        <div class="centered" id="identity"><span id="site-logo" class="bg0"></span><span id="site-name">Dashboard</span></div>
+    </header>
+    <nav class="bg2" id="menu"> 
+        <ul class="menu-list">
+            <li><button class="brdls menu-btn menu-btn-on">Dashboard <i class="fa fa-angle-right"></i></button></li>
+            <li><button class="brdls menu-btn menu-btn-off">Profile <i class="fa fa-angle-right"></i></button></li>
+            <li><button class="brdls menu-btn menu-btn-off">Wallets <i class="fa fa-angle-right"></i></button></li>
+            <li><button class="brdls menu-btn menu-btn-off">Notifications <i class="fa fa-angle-right"></i></button></li>
+            <li><button class="brdls menu-btn menu-btn-off">History <i class="fa fa-angle-right"></i></button></li>
+            <li><button class="brdls menu-btn menu-btn-off">Settings <i class="fa fa-angle-right"></i></button></li>
+            <hr class="menu-demacate">
+            <li><a href="#" class=""><button class="brdls menu-btn bg-tr menu-btn-alt">Support <i class="fa fa-headset"></i></button></a></li>
+            <li><a href="#" class=""><button class="brdls menu-btn bg-tr menu-btn-alt">About us <i class="fa fa-info-circle"></i></button></a></li>
+            <li><a href="#" class=""><button style="color: #f63c3c;" class="brdls menu-btn bg-tr menu-btn-alt">Logout <i class="fa fa-sign-out-alt"></i></button></a></li>
+        </ul> 
+    </nav>
+    
+
+    <section id="page" class="center-item bg2 scroll-bar">
+        <div id="top">
+            <span id="user-logo"></span><p class="user-name txt3">Welcome Odai, Karmy</p>
+        </div>
+        <div class="acc-det bg1">
+            <section class="txt0">
+                <p class="sts"><i class="fa fa-wallet fa-lg"></i> Total Equity value : </p>
+                <p class="bal"> 21400.20 USD</p>
+                <button class="fa fa-eye-slash brdls bg-tr txt0"></button>
+                <p></p>
+                <section id="quick-actions" class="txt0">
+                    <button class="brdls bg-tr quick-actions-item txt0">Deposit <i class="fa fa-arrow-down"></i></button>
+                    <button class="brdls bg-tr quick-actions-item txt0">Make Payments <i class="fa fa-credit-card"></i></button>
+                    <button class="brdls bg-tr quick-actions-item txt0">Tier 2 <i class="fa fa-angle-right"></i></button>
+                </section>
+            </section>
+        </div>
+
+        <div id="first-sect">
+            <div id="history-min" class="card1 bg0">
+                <div class="head"><span>Recent Activities</span><a href="#" class="txt2">See more <i class="fa fa fa-angle-right"></i></a></div>
+                <ul class="body scroll-bar">
+                    <li><span>Crypto Purchase</span><span>3mo ago</span><span class="deb">-$450</span></li>
+                    <li><span>Crypto Purchase</span><span>3mo ago</span><span class="deb">-$500</span></li>
+                    <li><span>Savings Returns</span><span>3mo ago</span><span class="cred">+$4932.98</span></li>
+                    <li><span>Withdrawal</span><span>3mo ago</span><span class="deb">-$6300</span></li>
+                    <li><span>Deposit</span><span>4mo ago</span><span class="cred">+$4000</span></li>
+                    <li><span>Auto Payment</span><span>4mo ago</span><span class="deb">-$4339</span></li>
+                    <li><span>Crypto Purchase</span><span>5mo ago</span><span class="deb">-$500</span></li>
+                    <li><span>Withdrawal</span><span>5mo ago</span><span class="deb">-$10000</span></li>
+                </ul>
+            </div>
+            <div id="usr">
+                <div class="card1 bg0" id="acc-tools-min">
+                    <div class="head"><a href="#" class="txt2">See more <i class="fa fa fa-angle-right"></i></a></div>
+                    <div class="body">
+                        <div class="tool-item">
+                            <button class="bg-tr brdls txt2">
+                                <i class="fa fa-download"></i>
+                                <span>Deposit</span>
+                            </button>
+                        </div>
+                        <div class="tool-item ">
+                            <button class="bg-tr brdls txt2">
+                                <i class="fas fa-credit-card"></i>
+                                <span>Withdraw</span>
+                            </button>
+                        </div>
+                        <div class="tool-item">
+                            <button class="bg-tr brdls txt2">
+                                <i class="fa-solid fa-money-bill-transfer"></i>
+                                <span>Transfer</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="overview-min" class="card1 bg0">
+                    <div class="head"><span>Total Overview</span><a href="#" class="txt2">View History<i class="fa fa fa-angle-right"></i></a></div>
+                    <div class="body">
+                        <ul class="body">
+                            <li><span><button class="brdls">This Year</button><button class="brdls bg1 txt0">This Month</button></span></li>
+                            <li><span>Total In</span><span>$0</span></li>
+                            <li><span>Total Out</span><span>$0</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <section id="history" class="center-item bg2 scroll-bar">
+        <div class="history-head card1 bg0">
+            <div class="txt2">Transaction History</div>
+            <div class="bg0">
+                <button class="bg1 brdls txt1">This Year</button>
+                <button class="bg1 brdls txt1">All Time</button>
+            </div>
+        </div>
+        <div class="history-body bg2">
+            <ul id="histories">
+                <li>
+                    <span>Date</span><span>Description</span><span>Status</span><span>Amount</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$500</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+                <li>
+                    <span>19-03-23</span><span>Crypto Purchase</span><span>Success</span><span>-$450</span>
+                </li>
+            </ul>
+        </div>
+        <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                        <script type="text/javascript">
+                        new TradingView.widget(
+                        {
+                        "autosize": true,
+                        "symbol": "CRYPTOCAP:BTC",
+                        "timezone": "Etc/UTC",
+                        "theme": "dark",
+                        "style": "1",
+                        "locale": "en",
+                        "toolbar_bg": "#f1f3f6",
+                        "enable_publishing": false,
+                        "withdateranges": true,
+                        "range": "YTD",
+                        "hide_side_toolbar": false,
+                        "allow_symbol_change": true,
+                        "watchlist": [
+                            "COINBASE:BTCUSD",
+                            "COINBASE:ETCUSD",
+                            "BITFINEX:XRPUSD",
+                            "HUOBI:BTCHUSD"
+                        ],
+                        "details": true,
+                        "hotlist": true,
+                        "calendar": true,
+                        "studies": [
+                            "CCI@tv-basicstudies"
+                        ],
+                        "container_id": "tradingview_15021"
+                        }
+                        );
+                        </script> -->
+    </section>
+    <section id="settings" class="center-item bg2 scroll-bar">
+        <!-- <div class="setting-profile-min card2" >
+            <span class="user-logo bg0"></span>
+            <span class="user-name">Odai Karmy</span><span class="user-email">eze***05@gmail.com</span>
+            <span><span>Tier 2</span><button class="brdls bg-tr">Edit <i class="fa fa-angle-right"></i></button></span>
+        </div> -->
+        <div id="gen-settings" class="set">
+            <div class="head">
+                <p class="bg2">General</p>
+            </div>
+            <div class="body">
+                <ul class="list">
+                    <li>
+                        <p>Email Address:</p>
+                        <input type="email" class="brdls bg0" disabled value="ezetheophilus@gmail.com">
+                    </li>
+                    <li>
+                        <p>Phone:</p>
+                        <input type="tel" class="brdls bg0" disabled value="+234-706-294-9727">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="acc-settings" class="set">
+            <div class="head">
+                <p class="bg2">Account</p>
+            </div>
+            <div class="body">
+                <ul class="list">
+                    <li>
+                        <p class="flex-span-width"><span>Default Currency:</span><span class="deb">Not Available Currently</span></p>
+                        <span class="cred">BTC</span>
+                    </li>
+                    <li>
+                        <p>Set New Crypto Payment address:</p>
+                        <input type="text" class="brdls bg0">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="sec-settings" class="set">
+            <div class="head">
+                <p class="bg2">Security and privacy</p>
+            </div>
+            <div class="body">
+                <ul class="list">
+                    <li>
+                        <p class="flex-span-width"><span>Reset Password</span><span class="deb">Not Available Currently</span></p>
+                    </li>
+                    <li>
+                        <span>Old Password:</span>
+                        <input type="text" class="brdls bg0" disabled>
+                    </li>
+                    <li>
+                        <span>New Password:</span>
+                        <input type="text" class="brdls bg0" disabled>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="save-settings">
+            <button class="set-btn card1 brdls bg0">Cancel</button> <button class="set-btn card1 brdls bg1 txt1">Save</button>
+        </div>
+    </section>
+    <aside class="bg2 scroll-bar" id="menu-alt">
+        <div id="profile-min" class="card1">
+            <div class="head">
+                <span class="user-logo bg0"></span>
+                <span class="user-name txt4">Odai Karmy</span>
+            </div>
+            <div class="body card1 bg0">
+                <div class="h l txt3">Total Balance</div>
+                <div class="h r txt3">Available Balance</div>
+                <div class="b l txt3">$21400.20</div>
+                <div class="b r txt3">$0.00</div>
+            </div>
+        </div>
+        <div id="crypto-bar">
+            <ul id="coins-list txt3">
+                <li class="coin">
+                    <span class="coin-head">
+                        <span class="coin-logo bg0 btc-l"></span>
+                        <span class="__head">
+                            <span class="coin-name">Bitcoin</span>
+                            <span class="coin-price">$ 24,499.00</span>
+                        </span>
+                    </span>
+                    <span class="coin-price-change cred">+3.2%</span>
+                </li>
+                <li class="coin">
+                    <span class="coin-head">
+                        <span class="coin-logo bg0 eth-l"></span>
+                        <span class="__head">
+                            <span class="coin-name">Ethereum</span>
+                            <span class="coin-price">$ 24,499.00</span>
+                        </span>
+                    </span>
+                    <span class="coin-price-change cred">+3.2%</span>
+                </li>
+                <li class="coin">
+                    <span class="coin-head">
+                        <span class="coin-logo bg0 ltc-l"></span>
+                        <span class="__head">
+                            <span class="coin-name">Litecoin</span>
+                            <span class="coin-price">$ 24,499.00</span>
+                        </span>
+                    </span>
+                    <span class="coin-price-change cred">+3.2%</span>
+                </li>
+                <li class="coin">
+                    <span class="coin-head">
+                        <span class="coin-logo bg0 bnb-l"></span>
+                        <span class="__head">
+                            <span class="coin-name">BNB</span>
+                            <span class="coin-price">$ 24,499.00</span>
+                        </span>
+                    </span>
+                    <span class="coin-price-change cred">+3.2%</span>
+                </li>
+                <li class="coin">
+                    <span class="coin-head">
+                        <span class="coin-logo bg0 trx-l"></span>
+                        <span class="__head">
+                            <span class="coin-name">Tron</span>
+                            <span class="coin-price">$ 24,499.00</span>
+                        </span>
+                    </span>
+                    <span class="coin-price-change cred">+3.2%</span>
+                </li>
+                <li class="coin">
+                    <span class="coin-head">
+                        <span class="coin-logo bg0 dg-l"></span>
+                        <span class="__head">
+                            <span class="coin-name">Dogecoin</span>
+                            <span class="coin-price">$ 24,499.00</span>
+                        </span>
+                    </span>
+                    <span class="coin-price-change cred">+3.2%</span>
+                </li>
+                <li class="coin">
+                    <span class="coin-head">
+                        <span class="coin-logo bg0 bch-l"></span>
+                        <span class="__head">
+                            <span class="coin-name">Bitcoin Cash</span>
+                            <span class="coin-price">$ 24,499.00</span>
+                        </span>
+                    </span>
+                    <span class="coin-price-change cred">+3.2%</span>
+                </li>
+                <li class="coin">
+                    <span class="coin-head">
+                        <span class="coin-logo bg0 usdc-l"></span>
+                        <span class="__head">
+                            <span class="coin-name">USDC</span>
+                            <span class="coin-price">$ 24,499.00</span>
+                        </span>
+                    </span>
+                    <span class="coin-price-change cred">+3.2%</span>
+                </li>
+                <li class="coin">
+                    <span class="coin-head">
+                        <span class="coin-logo bg0 shb-l"></span>
+                        <span class="__head">
+                            <span class="coin-name">Shiba Inu </span>
+                            <span class="coin-price">$ 24,499.00</span>
+                        </span>
+                    </span>
+                    <span class="coin-price-change cred">+3.2%</span>
+                </li>
+                <li class="coin">
+                    <span class="coin-head">
+                        <span class="coin-logo bg0 xrp-l"></span>
+                        <span class="__head">
+                            <span class="coin-name">XRP</span>
+                            <span class="coin-price">$ 24,499.00</span>
+                        </span>
+                    </span>
+                    <span class="coin-price-change cred">+3.2%</span>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+
+
+
+
+
+
+    
+    <aside id="loader">
+        <div class="top">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="bottom">
+            <div></div>
+        </div>
+    </aside>
+
+</body>
+</html>
+    
+    

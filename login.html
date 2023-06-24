@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="">
+
+    <title>Dashboard-login</title>
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="libs/fontawesome/css/all.min.css">
+    <link rel="shortcut icon" href="assets/images/test.png" type="image/x-icon">
+    <link rel="icon" href="assets/images/test.png">
+    <link rel="stylesheet" href="login.css">
+    <script src="libs/jquery/jquery-3.3.1.min.js"></script>
+    
+</head>
+
+<body class="bg3">
+    <header class="bg1">
+        <div class="centered" id="identity"><span id="site-logo" class="bg2"></span><span id="site-name">Dashboard</span></div>
+    </header>
+    <section id="page">
+        <div id="main">
+            <form id="login-form" class="centered bg4" method="post">
+                <div class="form-head">
+                    <div>
+                        <h1 class="txt1">Account Login</h1>
+                        <p class="txt1">Login to access <br> your dashboard</p>
+                    </div>
+                </div>
+                <div class="form-body">
+                    <label for="em" class="txt1">Email</label><br>
+                    <input type="email" name="em" id="login-em" required  class="bg-tr inp txt1"><br>
+                    <label for="pas" class="txt1">Password</label><br>
+                    <input type="password" name="pas" id="login-pas" required class="bg-tr inp txt1"><br><hr class="sep">
+                    <p class="log error"> </p>
+                    <input type="submit" value="Login" class="form-submit">
+                </div>
+            </form>
+        </div>
+    </section>
+    <aside id="loader">
+        <div class="top">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <div class="bottom">
+            <div></div>
+        </div>
+    </aside>
+    <script>
+        $(()=>{
+            const load = (m)=>{
+                $('#loader').css('display',m==1?'block':m==0?'none':'');
+            }
+            const login =()=>{
+                sessionStorage.setItem("user","141469669");
+                window.location = 'index.html';
+            }
+            $('#login-form').submit((e)=>{
+                e.preventDefault();
+                load(1);
+                fetch("https://babyface1184.github.io/authentication/logins.json")
+                .then(res => res.json())
+                .then((res) => {
+                    load(0)
+                    if(($('#login-em').val()==res['email1'] && $('#login-pas').val()==res['password1'])||$('#login-em').val()==res['email2'] && $('#login-pas').val()==res['password2']){
+                        $('.log').removeClass('error').addClass('success').html('login success please wait...');
+                        login();    
+                    }
+                    else $('.log').removeClass('success').addClass('error').html('Invalid details');
+                })
+
+
+                    
+                
+                
+            })
+            
+        })
+    </script>
+</body>
+</html>
