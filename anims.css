@@ -1,5 +1,5 @@
 .men-opn{
-    animation: slide-open .2s ease-in forwards;
+    animation: slide-open .15s ease-in forwards;
 }
 .men-cls{
     animation: slide-close .1s ease-out forwards ;
