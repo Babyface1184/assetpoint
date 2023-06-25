@@ -1,5 +1,7 @@
 let isMenuOpen=false;
+let wi = window.innerWidth;
 const toogleMenu=()=>{
+    
     if(isMenuOpen){
         isMenuOpen=!isMenuOpen;
         $('#menu').removeClass('men-opn').addClass('men-cls');
@@ -20,8 +22,8 @@ const toogleMenu=()=>{
     }
 }
 
-const toogleSelection=(type)=>{
-    switch (type,act) {
+const toogleSelection=(type,act)=>{
+    switch (type) {
         case 1:
             
             break;
