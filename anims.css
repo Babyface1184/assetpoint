@@ -1,0 +1,22 @@
+.men-opn{
+    animation: slide-open .2s ease-in forwards;
+}
+.men-cls{
+    animation: slide-close .1s ease-out forwards ;
+}
+@keyframes slide-open {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100vw;
+    }
+}
+@keyframes slide-close {
+    from{
+        width: 100vw;
+    }
+    to{
+        width: 0;
+    }
+}
