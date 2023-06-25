@@ -35,7 +35,7 @@
     <nav class="bg2" id="menu"> 
         <ul class="menu-list">
             <li><button id="show-dashboard" class="brdls menu-btn menu-btn-on">Dashboard <i class="fa fa-angle-right"></i></button></li>
-            <li><button id="show-profiles" class="brdls menu-btn menu-btn-off">Profile <i class="fa fa-angle-right"></i></button></li>
+            <li><button id="show-profile" class="brdls menu-btn menu-btn-off">Profile <i class="fa fa-angle-right"></i></button></li>
             <li><button id="show-wallets" class="brdls menu-btn menu-btn-off">Wallets <i class="fa fa-angle-right"></i></button></li>
             <li><button id="show-notifications" class="brdls menu-btn menu-btn-off">Notifications <i class="fa fa-angle-right"></i></button></li>
             <li><button id="show-history" class="brdls menu-btn menu-btn-off">History <i class="fa fa-angle-right"></i></button></li>
@@ -50,10 +50,12 @@
         $(()=>{
             $('#men-open-btn').click(()=>{ 
                     toogleMenu()
-                }
-            )
+                })
             $('#show-dashboard').click(()=>{
                 toogleSelection(1);
+            })
+            $('#show-profile').click(()=>{
+                toogleSelection(2);
             })
             $('#show-history').click(()=>{
                 toogleSelection(5);
@@ -132,7 +134,13 @@
                 </div>
             </div>
         </div>
-        
+    </section>
+    <section id="profile" class="center-item bg2 scroll-bar">
+        <div class="profile-head card2" >
+            <span class="user-logo bg0"></span>
+            <span class="user-name">Odai Karmy</span><span class="user-email">eze***05@gmail.com</span>
+            <span><span>Tier 2</span><button class="brdls bg-tr">Edit <i class="fa fa-angle-right"></i></button></span>
+        </div>
     </section>
     <section id="history" class="center-item bg2 scroll-bar">
         <div class="history-head card1 bg0">
@@ -240,11 +248,7 @@
                         </script> -->
     </section>
     <section id="settings" class="center-item bg2 scroll-bar">
-        <!-- <div class="setting-profile-min card2" >
-            <span class="user-logo bg0"></span>
-            <span class="user-name">Odai Karmy</span><span class="user-email">eze***05@gmail.com</span>
-            <span><span>Tier 2</span><button class="brdls bg-tr">Edit <i class="fa fa-angle-right"></i></button></span>
-        </div> -->
+        
         <div id="gen-settings" class="set">
             <div class="head">
                 <p class="bg2">General</p>

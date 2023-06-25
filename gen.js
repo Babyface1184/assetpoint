@@ -30,7 +30,8 @@ const toogleSelection=(type)=>{
             $('#show-dashboard').addClass('menu-btn-on');
             break;
         case 2:
-            
+            $('#profile').css('display','block');
+            $('#show-profile').addClass('menu-btn-on');
             break;
         case 3:
             

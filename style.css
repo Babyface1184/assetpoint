@@ -538,6 +538,36 @@ header{
     box-shadow: .5px .5px 2px #414142;
 }
 
+#profile{
+    display: none;
+    padding: .5em;
+}
+.profile-head{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.profile-head .user-logo{
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+}
+.profile-head span:nth-child(4){
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    width: 95%;
+    color: #418cef;
+}
+.profile-head span:nth-child(4) button{
+    padding: .3em;
+    border-radius: .5em;
+}
+.profile-head span:nth-child(4) button:hover{
+    color: #418cef;
+    box-shadow: 1px 1px 2px #212122;
+}
 
 #history{
     display: none;  
@@ -607,32 +637,7 @@ header{
     padding: 1em;
     display: none; 
 }
-/* .setting-profile-min{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-}
-.setting-profile-min .user-logo{
-    width: 4em;
-    height: 4em;
-    border-radius: 50%;
-}
-.setting-profile-min span:nth-child(4){
-    display: flex;
-    justify-content: space-between;
-    font-size: 1em;
-    width: 95%;
-    color: #418cef;
-}
-.setting-profile-min span:nth-child(4) button{
-    padding: .3em;
-    border-radius: .5em;
-}
-.setting-profile-min span:nth-child(4) button:hover{
-    color: #418cef;
-    box-shadow: 1px 1px 2px #212122;
-} */
+
 
 .set{
     height: fit-content;
