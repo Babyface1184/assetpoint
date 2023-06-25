@@ -1,5 +1,4 @@
 let isMenuOpen=false;
-let wi = window.innerWidth;
 const toogleMenu=()=>{
     
     if(isMenuOpen){
@@ -22,10 +21,13 @@ const toogleMenu=()=>{
     }
 }
 
-const toogleSelection=(type,act)=>{
+const toogleSelection=(type)=>{
+    $('.center-item').css('display','none');
+    $('.menu-btn').removeClass('menu-btn-on').addClass('menu-btn-off');
     switch (type) {
         case 1:
-            
+            $('#page').css('display','block');
+            $('#show-dashboard').addClass('menu-btn-on');
             break;
         case 2:
             
@@ -37,14 +39,17 @@ const toogleSelection=(type,act)=>{
             
             break;
         case 5:
-            
+            $('#history').css('display','block');   
+            $('#show-history').addClass('menu-btn-on');
             break;
         case 6:
-            
+            $('#settings').css('display','block');   
+            $('#show-settings').addClass('menu-btn-on');
             break;
     
     
         default:
             break;
     }
+    if(window.innerWidth<600) toogleMenu()
 }

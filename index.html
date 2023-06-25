@@ -34,12 +34,12 @@
     </header>
     <nav class="bg2" id="menu"> 
         <ul class="menu-list">
-            <li><button class="brdls menu-btn menu-btn-on">Dashboard <i class="fa fa-angle-right"></i></button></li>
-            <li><button class="brdls menu-btn menu-btn-off">Profile <i class="fa fa-angle-right"></i></button></li>
-            <li><button class="brdls menu-btn menu-btn-off">Wallets <i class="fa fa-angle-right"></i></button></li>
-            <li><button class="brdls menu-btn menu-btn-off">Notifications <i class="fa fa-angle-right"></i></button></li>
-            <li><button class="brdls menu-btn menu-btn-off">History <i class="fa fa-angle-right"></i></button></li>
-            <li><button class="brdls menu-btn menu-btn-off">Settings <i class="fa fa-angle-right"></i></button></li>
+            <li><button id="show-dashboard" class="brdls menu-btn menu-btn-on">Dashboard <i class="fa fa-angle-right"></i></button></li>
+            <li><button id="show-profiles" class="brdls menu-btn menu-btn-off">Profile <i class="fa fa-angle-right"></i></button></li>
+            <li><button id="show-wallets" class="brdls menu-btn menu-btn-off">Wallets <i class="fa fa-angle-right"></i></button></li>
+            <li><button id="show-notifications" class="brdls menu-btn menu-btn-off">Notifications <i class="fa fa-angle-right"></i></button></li>
+            <li><button id="show-history" class="brdls menu-btn menu-btn-off">History <i class="fa fa-angle-right"></i></button></li>
+            <li><buttonn id="show-settings" class="brdls menu-btn menu-btn-off">Settings <i class="fa fa-angle-right"></i></button></li>
             <hr class="menu-demacate">
             <li><a href="#" class=""><button class="brdls menu-btn bg-tr menu-btn-alt">Support <i class="fa fa-headset"></i></button></a></li>
             <li><a href="#" class=""><button class="brdls menu-btn bg-tr menu-btn-alt">About us <i class="fa fa-info-circle"></i></button></a></li>
@@ -52,6 +52,15 @@
                     toogleMenu()
                 }
             )
+            $('#show-dashboard').click(()=>{
+                toogleSelection(1);
+            })
+            $('#show-history').click(()=>{
+                toogleSelection(5);
+            })
+            $('#show-settings').click(()=>{
+                toogleSelection(6);
+            })
         })
     </script>
 
