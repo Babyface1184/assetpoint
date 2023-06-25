@@ -1,20 +1,18 @@
+let isMenuOpen=false;
 const toogleMenu=()=>{
     if(isMenuOpen){
         isMenuOpen=!isMenuOpen;
-        menu.style.display="none";
-        menu.style.visibility="hidden";
-        if(mode=='_m12'){
-            $('#slct-12').removeClass('txt-clr1 bg2').addClass('txt-clr5 bg3');
-            $('#slct-24').removeClass('txt-clr5 bg3').addClass('txt-clr1 bg2');
-        }else if(mode=='_m24'){
-            $('#slct-24').removeClass('txt-clr1 bg2').addClass('txt-clr5 bg3');
-            $('#slct-12').removeClass('txt-clr5 bg3').addClass('txt-clr1 bg2');
-        }
+        $('#menu').removeClass('').addClass('');
+        $('#menu').removeClass('').addClass('');
+        $('#menu').css({'display':'none','visibility':'hidden'})
+        $('body').css({'overflow':'scroll'});
         
     }
     else if(!isMenuOpen){
         isMenuOpen=!isMenuOpen;
-        menu.style.display="flex";
+        $('#menu').css({'display':'block','visibility':'visible'});
+        $('body').css({'overflow':'hidden'});
+
         menu.style.visibility="visible";
     }
 }

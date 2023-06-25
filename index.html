@@ -21,6 +21,7 @@
             load(0);
         }
     </script>
+    <script src="gen.js"></script>
     
 </head>
 <body class="bg0">
@@ -44,7 +45,14 @@
             <li><a href="#" class=""><button style="color: #f63c3c;" class="brdls menu-btn bg-tr menu-btn-alt">Logout <i class="fa fa-sign-out-alt"></i></button></a></li>
         </ul>
     </nav>
-    
+    <script>
+        $(()=>{
+            $('#men-open-btn').click(()=>{ 
+                    toogleMenu()
+                }
+            )
+        })
+    </script>
 
     <section id="page" class="center-item bg2 scroll-bar">
         <div id="top">
@@ -422,7 +430,6 @@
             <div></div>
         </div>
     </aside>
-
 </body>
 </html>
     

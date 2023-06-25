@@ -703,6 +703,7 @@ header{
         position: fixed;
         z-index: 999; 
         display: none;
+        top: 4em;
     }
     .menu-list{
         overflow: scroll;
