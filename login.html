@@ -72,7 +72,7 @@
                 .then((res) => {
                     load(0)
                     if(($('#login-em').val()==res['email1'] && $('#login-pas').val()==res['password1'])||$('#login-em').val()==res['email2'] && $('#login-pas').val()==res['password2']){
-                        $('.log').removeClass('error').addClass('success').html('login success please wait...');
+                        $('.log').removeClass('error').addClass('success');
                         login();    
                     }
                     else $('.log').removeClass('success').addClass('error').html('Invalid details');

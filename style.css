@@ -440,9 +440,8 @@ header{
     height: calc(100% - 1.4em);
 }
 #history-min .body li{
-    display: grid;
+    display: flex;
     justify-content: space-between;
-    grid-template-columns: 45% 20% 25%;
     height: 2em;
     padding: .2em;
 }
