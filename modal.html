@@ -1,11 +1,11 @@
 <head>
-    <meta http-equiv="refresh" content="2">
+    <meta http-equiv="refresh" content="6">
 </head>
 
 <style>
 
 .bg0{
-    background-color: #efefef;
+    background-color: #ececec;
 }
 .bg1{
     background-color: #418cef;
@@ -39,8 +39,9 @@
     top: 0;
     left: 0;
     background-color: #00000066;
-    border: 1px solid red;
+    display: none;
 }
+
 .modal-main{
     position: absolute;
     left: 35vw;
@@ -62,7 +63,6 @@
     padding: 0 1em;
     flex-grow: 5;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    border: 1px solid black;
 }
 #modal-actions{
     flex-grow: 2;
@@ -71,22 +71,40 @@
 }
 #modal-actions button{
     height: 2.5em;
+    width: 25%;
     padding: .6em 1em;
-    display: block;
+    /* display: block; */
     margin: 0 auto;
+    /* border: none; */
+    border-radius: .5em;
+}
+#modal-actions button:hover{
+    box-shadow: .5px .5px 1.5px #adadad;
+}
+#modal-cancel{
+    /* display: none; */
+    border: 1px solid red;
 }
 
 </style>
 <section id="modal-full">
     <div class="modal-main" tabindex="-1">
         <div id="modal-message">
-            <h3 class="txt3">At this moment withdrawal is currently closed
-                <br>Make a depoit first
-            </h3>
+            <h3 class="txt3"></h3>
         </div>
         <div id="modal-actions">
-            <button class="bg">Cancel</button>
-            <button>Ok</button>
+            <button class="bg0 modal-actions-btn" id="modal-cancel">Cancel</button>
+            <button class="bg1 modal-actions-btn" id="modal-ok">Ok</button>
         </div>
     </div>
 </section>
+<script src="libs/jquery/jquery-3.3.1.min.js"></script>
+<script>
+    const modal=(msg,mode,act,goto)=>{
+        $('#modal-full').css('display','block');
+        $('#modal-message h3').html(msg);
+        //if(mode) $('#modal-cancel').css('display','block')
+
+    }
+    modal(1,false,1,1);
+</script>
