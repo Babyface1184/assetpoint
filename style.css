@@ -568,6 +568,10 @@ header{
     box-shadow: 1px 1px 2px #212122;
 }
 
+
+
+
+
 #history{
     display: none;  
     padding: .5em;
@@ -576,7 +580,6 @@ header{
     padding: 1em .8em .4em .8em;
     position: relative;
     top: 1em;
-
 }
 .history-head div:nth-child(1){
     font-family: custm;
@@ -606,7 +609,8 @@ header{
     list-style-type: none;
 }
 #histories li{
-    display: flex;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
     height: 3em;
     justify-content: space-between;
     font-weight: 450;
@@ -614,11 +618,6 @@ header{
     font-size: .9em;
 }
 
-#histories li span:nth-child(1){
-    font-family: monospace;
-    font-weight: 700;
-    font-size: 1.3em;
-}
 #histories li:nth-child(1){
     font-size: 1.1em;
     font-weight: 600;
@@ -628,7 +627,10 @@ header{
     border-bottom: 1px dashed #111225;
 }
 #histories li span:nth-child(2){
-    color: #212122;
+    text-align: center;
+}
+#histories li span:nth-child(3){
+    text-align: right;
 }
 
 
@@ -890,6 +892,17 @@ header{
         font-size: .8em;
         font-weight: 500;
     }
+    /* modal styling */
+    .modal-main{
+        left: 15vw;
+        top: 40vh;
+        width: 70vw;
+        height: 20vh;
+    }
+    #modal-message{
+        padding: .6em;
+    }
+    /* modal styling end */
 }
 @media screen and (max-width:600px) {
     
