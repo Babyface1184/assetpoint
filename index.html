@@ -306,8 +306,13 @@
             </div>
         </div>
         <div class="save-settings">
-            <button class="set-btn card1 brdls bg0">Cancel</button> <button class="set-btn card1 brdls bg1 txt1">Save</button>
+            <button class="set-btn card1 brdls bg0" id="cancel-set">Cancel</button> <button class="set-btn card1 brdls bg1 txt1" id="save-set">Save</button>
         </div>
+        <script>
+            $('#save-set').click(()=>{
+                modal("Are you sure you want to update settings",false,false,1);
+            })
+        </script>
     </section>
     <aside class="bg2 scroll-bar" id="menu-alt">
         <div id="profile-min" class="card1">
@@ -447,8 +452,3 @@
     </aside>
 </body>
 </html>
-<script>
-    modal("Sorry withdrawal is currently closed at this moment you should deposit first. Do you wish to continue",true,1);
-</script>
-    
-    

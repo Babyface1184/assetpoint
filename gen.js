@@ -21,7 +21,7 @@ const toogleMenu=()=>{
     }
 }
 
-const toogleSelection=(type)=>{
+const toogleSelection=(type,toggleMenu=true)=>{
     $('.center-item').css('display','none');
     $('.menu-btn').removeClass('menu-btn-on').addClass('menu-btn-off');
     switch (type) {
@@ -52,5 +52,5 @@ const toogleSelection=(type)=>{
         default:
             break;
     }
-    if(window.innerWidth<600) toogleMenu()
+    if(toggleMenu && window.innerWidth<600) toogleMenu()
 }
