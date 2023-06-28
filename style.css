@@ -692,6 +692,59 @@ header{
 
 
 
+/* modal styling */
+#modal-full{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #00000066;
+    display: none;
+    z-index: 9999;
+}
+
+.modal-main{
+    position: absolute;
+    left: 35vw;
+    top: calc(50vh - 10vw);
+    width: 30vw;
+    height: 15vw;
+    background-color: #fafafa;
+    border-radius: .7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.modal-main:focus{
+    outline: none;
+}
+#modal-message{
+    padding: 1em;
+    flex-grow: 5;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+#modal-actions{
+    flex-grow: 2;
+    display: flex;
+    justify-content: space-between;
+}
+.modal-actions-btn{
+    height: 2.5em;
+    width: 25%;
+    padding: .6em 1em;
+    margin: 0 auto;
+    border: none;
+    border-radius: .5em;
+}
+.modal-actions-btn:hover{
+    box-shadow: .5px .5px 1.5px #adadad;
+}
+#modal-cancel{
+    display: none;
+}
+/* modl styling end */
+
 
 
 @media screen and (max-width:600px){
