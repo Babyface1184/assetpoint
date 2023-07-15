@@ -396,9 +396,9 @@ header{
     font-family: 'Arial Narrow Bold', sans-serif;
 }
 #quick-actions{
-    display: flex;
-    justify-content: space-between;
     padding: .4em 1em;
+    width: fit-content;
+    margin: 0 0 0 auto;
 }
 .quick-actions-item{
     padding: .5em;
@@ -412,58 +412,27 @@ header{
 }
 #first-sect{
     display: grid;
-    grid-template-columns: 47% 47%;
-    grid-template-rows: 15em;
+    grid-template-columns: 100%;
+    grid-template-rows: 11em 15em;
     gap: 4%;
     margin: 2em auto 5em auto;
     padding: .5em;
 }
-#history-min{
-    width: 100%;
-    padding: .3em;
-    overflow: hidden;
-}
-#history-min .head{
-    display: flex;
-    justify-content: space-between;
-    padding: .1em;
-    font-size: .8em;
-    font-family: custm;
-}
-#history-min .head span{
-    font-weight: 700;
-    font-size: 1.1em !important;
-}
-#history-min .body{
-    list-style-type: none;
-    overflow-y: scroll;
-    height: calc(100% - 1.4em);
-}
-#history-min .body li{
-    display: flex;
-    justify-content: space-between;
-    height: 2em;
-    padding: .2em;
-}
-#history-min .body li span{ 
-    text-align: left;
-    font-size: 1em;
-    font-family: custm;
-}
-#history-min .body li span:nth-child(2){
-    font-size: .7em;
-}
+
 #usr{
     width: 100%;
+    margin-bottom: 1em;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 2%;
 }
-
 #acc-tools-min{
     margin: 1em auto;
     width: 100%;
 }
-
 #acc-tools-min .head{
     font-size: .8em;
+    font-family: custm;
     padding: .2em;
     text-align: right;
 }
@@ -504,13 +473,14 @@ header{
 }
 #overview-min{
     font-family: custm;
+    margin: 1em 0;
 }
 #overview-min .head{
     display: flex;
     justify-content: space-between;
     font-size: .8em;
     padding: .3em;
-    font-weight: 700;
+    font-weight: 500;
 }
 #overview-min .body{
     padding: .2em;
@@ -536,7 +506,45 @@ header{
 #overview-min .body li:nth-child(1) button:hover{
     box-shadow: .5px .5px 2px #414142;
 }
+#history-min{
+    width: 100%;
+    padding: .3em;
+    overflow: hidden;
+}
+#history-min .head{
+    display: flex;
+    justify-content: space-between;
+    padding: .1em;
+    font-size: .8em;
+    font-family: custm;
+}
+#history-min .head span{
+    font-weight: 700;
+    font-size: 1.1em !important;
+}
+#history-min .body{
+    list-style-type: none;
+    overflow-y: scroll;
+    height: calc(100% - 1.4em);
+}
+#history-min .body li{
+    display: flex;
+    justify-content: space-between;
+    height: 2em;
+    padding: .2em;
+}
+#history-min .body li span{ 
+    text-align: left;
+    font-size: 1em;
+    font-family: custm;
+}
+#history-min .body li span:nth-child(2){
+    font-size: .7em;
+}
 
+
+
+/* ----------------------------------------------------------------------------------- */
 #profile{
     display: none;
     padding: .5em;
@@ -568,7 +576,7 @@ header{
     box-shadow: 1px 1px 2px #212122;
 }
 
-
+/* ------------------------------------------------------------------------ */
 
 
 
@@ -617,7 +625,6 @@ header{
     font-family: custm;
     font-size: .9em;
 }
-
 #histories li:nth-child(1){
     font-size: 1.1em;
     font-weight: 600;
@@ -633,13 +640,11 @@ header{
     text-align: right;
 }
 
-
+/* ------------------------------------------------------------------------------- */
 #settings{
     padding: 1em;
     display: none; 
 }
-
-
 .set{
     height: fit-content;
     margin: 1.5em auto;
@@ -690,7 +695,7 @@ header{
     font-family: custm;
 }
 
-
+/* ---------------------------------------------------------------------------- */
 
 
 
@@ -848,6 +853,10 @@ header{
         gap: 4%;
         margin: 2em auto 5em auto;
         padding: .3em;
+    }
+    #usr{
+        margin-bottom: unset;
+        display: unset;
     }
     #history-min{
         height: 10em;
