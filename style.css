@@ -575,6 +575,28 @@ header{
     color: #418cef;
     box-shadow: 1px 1px 2px #212122;
 }
+.profile-body{
+    padding: 1em; 
+}
+.profile-body section{
+    font-family: custm;
+    margin: 1em auto;
+    padding: 1em;
+    border-bottom: 1px solid #c3c3c377;
+}
+.profile-body section ul{
+    list-style-type: none;
+}
+.ta{
+    font-size: .8em;
+}
+.tn{
+    font-size: 1em;
+    padding: .5em;
+    margin: .5em 0;
+    overflow-x: scroll;
+    border-radius: .3em;
+}
 
 /* ------------------------------------------------------------------------ */
 
