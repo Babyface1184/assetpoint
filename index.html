@@ -58,6 +58,9 @@
             $('#show-profile').click(()=>{
                 toogleSelection(2);
             })
+            $('#show-wallets').click(()=>{
+                toogleSelection(3);
+            })
             $('#show-history').click(()=>{
                 toogleSelection(5);
             })
@@ -67,7 +70,7 @@
         })
       
     </script>
-
+<!-- ---------------------------------------------------------------------------- -->
     <section id="page" class="center-item bg2 scroll-bar">
         <div id="top">
             <span id="user-logo"></span><p class="user-name txt3">Welcome Odai, Karmy</p>
@@ -77,7 +80,6 @@
                 <p class="sts"><i class="fa fa-wallet fa-lg"></i> Total Equity value : </p>
                 <p class="bal" id="balance"> 21400.20 USD</p>
                 <button class="fa fa-eye-slash brdls bg-tr txt0" id="bal-hide"></button>
-                <p></p>
                 <section id="quick-actions" class="txt0">
                     <button class="brdls bg-tr quick-actions-item txt0" id="to-profile">Tier 2 <i class="fa fa-angle-right"></i></button>
                 </section>
@@ -98,7 +100,7 @@
                         $('#balance').text('21400.20 USD');
                         balHidden = !balHidden;
                     }  
-                    
+
                 })
                 $('#to-profile').click(()=>{
                     toogleSelection(2,false);
@@ -158,6 +160,7 @@
         </div>
         
     </section>
+<!-- ------------------------------------------------------------------------- -->
     <section id="profile" class="center-item bg2 scroll-bar">
         <div class="profile-head card2 bg2" >
             <span class="user-logo bg0"></span>
@@ -214,7 +217,55 @@
             </section>
         </div>
     </section>
-
+<!-- ----------------------------------------------------------------------- -->
+    <section id="wallets" class="center-item bg2 scroll-bar">
+        <div id="wallet-type-regular" class="wallet card2">
+            <div class="wallet-head">
+                <div class="card2 bg1 wallet-card txt0">
+                    <h3>Regular</h3>
+                    <p>Balance:</p>
+                    <h1>21400.20 USD</h1><hr/>
+                    <p>Status : Active</p>
+                </div>
+            </div>
+            <div class="wallet-body">
+                <button class="wallet-selector brdls"><i class="fa fa-download"></i><p>Deposit</p></button>
+                <button class="wallet-selector brdls"><i class="fa fa-credit-card"></i><p>Withdraw</p></button> 
+            </div>
+        </div>
+        <div id="wallet-type-savings" class="wallet card2">
+            <div class="wallet-head">
+                <div class="card2 bg3 wallet-card txt0">
+                    <h3>Savings</h3>
+                    <p>Balance:</p>
+                    <h1>0.00 USD</h1><hr/>
+                    <p class="txt1">Status : Inactive</p>
+                </div>
+            </div>
+            <div class="wallet-body">
+                <button class="wallet-selector brdls"><i class="fa fa-download"></i><p>Deposit</p></button>
+                <button class="wallet-selector brdls"><i class="fa fa-credit-card"></i><p>Withdraw</p></button> 
+            </div>
+        </div>
+        <div id="wallet-type-earn" class="wallet card2">
+            <div class="wallet-head">
+                <div class="card2 bg4 wallet-card txt0">
+                    <h3>Earn</h3>
+                    <p>Balance:</p>
+                    <h1>0.00 USD</h1><hr/>
+                    <p class="txt1">Status : Inactive</p>
+                </div>
+            </div>
+            <div class="wallet-body">
+                <button class="wallet-selector brdls"><i class="fa fa-download"></i><p>Deposit</p></button>
+                <button class="wallet-selector brdls"><i class="fa fa-credit-card"></i><p>Withdraw</p></button> 
+            </div>
+        </div>
+        <div id="wallet-extras">
+            
+        </div>
+    </section>
+<!-- ----------------------------------------------------------------------- -->
     <section id="history" class="center-item bg2 scroll-bar">
         <div class="history-head card1 bg0">
             <div class="txt2">Transaction History</div>

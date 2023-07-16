@@ -21,6 +21,12 @@
 .bg2{
     background-color: #ffffff;
 }
+.bg3{
+    background-color: #30b130;
+}
+.bg4{
+    background-color: #88079c;
+}
 .bg-tr{
     background-color: transparent;
 }
@@ -599,8 +605,52 @@ header{
 }
 
 /* ------------------------------------------------------------------------ */
+#wallets{
+    display: none;
+    padding: 1em .5em;
+}
+.wallet{
+    margin: 2em auto;
+    display: grid;
+    grid-template-columns: 65% 30%;
+    gap: 4%;
+}
+.wallet-head{
+    font-family: custm;
+}
+.wallet-card{
+    padding: 1em;
+}
+.wallet-card h3{
+    padding: .3em 1em;
+}
+.wallet-card h1{
+    text-align: right;
+    padding: .5em 1em;
+}
+.wallet-body{
+    padding: 1em .5em;
+    display: flex;
+    justify-content: space-between;
+}
 
-
+.wallet-selector{
+    width: 5em;
+    padding: .3em .5em;
+    font-size: 1em;
+    border-radius: .4em;
+    transition: 0.3s ease-in;
+    font-family: custm;
+}
+.wallet-selector:hover{
+    background-color: #418cef;
+    color: #fff;
+    box-shadow: .5px .5px 4px #404040;
+}
+.wallet-selector:focus{
+    outline: none;
+}
+/* ------------------------------------------------------------------------ */
 
 #history{
     display: none;  

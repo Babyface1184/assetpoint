@@ -34,7 +34,8 @@ const toogleSelection=(type,toggleMenu=true)=>{
             $('#show-profile').addClass('menu-btn-on');
             break;
         case 3:
-            
+            $('#wallets').css('display','block');
+            $('#show-wallets').addClass('menu-btn-on');
             break;
         case 4:
             
