@@ -613,7 +613,7 @@ header{
     margin: 2em auto;
     display: grid;
     grid-template-columns: 65% 30%;
-    gap: 4%;
+    gap: 1%;
 }
 .wallet-head{
     font-family: custm;
@@ -629,13 +629,14 @@ header{
     padding: .5em 1em;
 }
 .wallet-body{
-    padding: 1em .5em;
-    display: flex;
+    padding: 1em auto;
+    display: grid;
     justify-content: space-between;
 }
 
 .wallet-selector{
-    width: 5em;
+    width: 100%;
+    margin: auto .5em;
     padding: .3em .5em;
     font-size: 1em;
     border-radius: .4em;
@@ -973,6 +974,28 @@ header{
         font-size: .8em;
         font-weight: 500;
     }
+    
+    #wallets{
+        display: none;
+        padding: 1em .5em;
+    }
+    .wallet{
+        margin: 1em auto;
+        grid-template-columns: unset;
+        gap: 1%;
+    }
+    .wallet-card{
+        padding: .8em;
+    }
+    .wallet-card h3{
+        padding: .3em .7em;
+    }
+    .wallet-body{
+        padding: 1em .5em;
+        display: flex;
+        justify-content: space-between;
+    }
+
     /* modal styling */
     .modal-main{
         left: 15vw;
