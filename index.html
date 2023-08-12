@@ -78,7 +78,7 @@
         <div class="acc-det bg1">
             <section class="txt0">
                 <p class="sts"><i class="fa fa-wallet fa-lg"></i> Total Equity value : </p>
-                <p class="bal" id="balance"> 50400.20 USD</p>
+                <p class="bal" id="balance"> 21400.20 USD</p>
                 <button class="fa fa-eye-slash brdls bg-tr txt0" id="bal-hide"></button>
                 <section id="quick-actions" class="txt0">
                     <button class="brdls bg-tr quick-actions-item txt0" id="to-profile">Tier 2 <i class="fa fa-angle-right"></i></button>
@@ -86,7 +86,7 @@
             </section>
         </div>
         <script>
-            $(()=>{;
+            $(()=>{
                 let balHidden = false;
                 $('#bal-hide').click((e)=>{
                     let ce = e.currentTarget;
@@ -262,9 +262,40 @@
             </div>
         </div>
         <div id="wallet-extras">
-            
+            <button class="wallet-selector brdls"><i class="fa-solid fa-money-bill-transfer"></i><p>Inter wallet Transfer</p></button>
+            <button class="wallet-selector brdls"><i class="fa fa-money-check-alt"></i><p>Activate New Wallet</p></button> 
+        </div>
+
+
+
+
+        <!-- chart js -->
+        <script src="libs/chartJS/chart.umd.min.js"></script>
+        <div id="wallet-analytics">
+            <canvas id="wallet-analytics-chart" aria-label="wallet analytics"></canvas>
+            <script>
+    
+                const chart = document.getElementById('wallet-analytics-chart').getContext('2d');
+    
+                new Chart(chart,{
+                    type : 'pie',
+                    data : {
+                        datasets : [{
+                            backgroundColor : ["#418cef", "#30b130", "#88079c"],
+                            data : [21400.20, 668, 416]
+                        }]
+                    },
+                    options : {
+                    }
+                })
+    
+            </script>
         </div>
     </section>
+
+
+
+
 <!-- ----------------------------------------------------------------------- -->
     <section id="history" class="center-item bg2 scroll-bar">
         <div class="history-head card1 bg0">
